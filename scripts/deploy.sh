@@ -17,13 +17,13 @@ export ARM_CLIENT_ID=$ADE_CLIENT_ID
 export ARM_TENANT_ID=$ADE_TENANT_ID
 export ARM_SUBSCRIPTION_ID=$ADE_SUBSCRIPTION_ID
 
-echo -e "\n>>> Terraform Info...\n"
+echo -e "\n>>> Terraform Info...\n" > "/alpha.txt"
 terraform -version
 
-echo -e "\n>>> Initializing Terraform...\n"
+echo -e "\n>>> Initializing Terraform...\n" > "/bravo.txt"
 terraform init -no-color
 
-echo -e "\n>>> Creating Terraform Plan...\n"
+echo -e "\n>>> Creating Terraform Plan...\n" > "/charlie.txt"
 export TF_VAR_resource_group_name=$ADE_RESOURCE_GROUP_NAME
 export TF_VAR_ade_env_name=$ADE_ENVIRONMENT_NAME
 export TF_VAR_env_name=$ADE_ENVIRONMENT_NAME
