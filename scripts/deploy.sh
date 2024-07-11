@@ -19,6 +19,7 @@ export ARM_SUBSCRIPTION_ID=$ADE_SUBSCRIPTION_ID
 
 echo -e "\n>>> Terraform Info...\n"
 terraform -version
+echo -e "ZZZZZZZ"
 ade log --content "AAAAAAAAA"
 ade log --type error --content "BBBBBB"
 # ade log --type verbose --content "This is a special log." --file "specialLogFile.txt"
