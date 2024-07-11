@@ -17,12 +17,10 @@ export ARM_CLIENT_ID=$ADE_CLIENT_ID
 export ARM_TENANT_ID=$ADE_TENANT_ID
 export ARM_SUBSCRIPTION_ID=$ADE_SUBSCRIPTION_ID
 
+echo -e "${az version}"
+
 echo -e "\n>>> Terraform Info...\n"
 terraform -version
-echo -e "ZZZZZZZ"
-ade log --content "AAAAAAAAA"
-ade log --type error --content "BBBBBB"
-# ade log --type verbose --content "This is a special log." --file "specialLogFile.txt"
 
 echo -e "\n>>> Initializing Terraform...\n"
 terraform init -no-color
