@@ -5,6 +5,8 @@
 
 set -e # exit on error
 
+eval $(ade init)
+
 EnvironmentState="$ADE_STORAGE/environment.tfstate"
 EnvironmentPlan="/environment.tfplan"
 EnvironmentVars="/environment.tfvars.json"
