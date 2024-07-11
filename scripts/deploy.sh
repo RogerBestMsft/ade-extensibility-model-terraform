@@ -21,7 +21,7 @@ echo -e "\n>>> Terraform Info...\n"
 terraform -version
 ade log --content "AAAAAAAAA"
 ade log --type error --content "BBBBBB"
-ade log --content "This is a special log." --file "specialLogFile.txt"
+# ade log --type verbose --content "This is a special log." --file "specialLogFile.txt"
 
 echo -e "\n>>> Initializing Terraform...\n"
 terraform init -no-color
