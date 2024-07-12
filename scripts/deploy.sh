@@ -17,6 +17,8 @@ export ARM_CLIENT_ID=$ADE_CLIENT_ID
 export ARM_TENANT_ID=$ADE_TENANT_ID
 export ARM_SUBSCRIPTION_ID=$ADE_SUBSCRIPTION_ID
 
+ade log --content "AAAAAAAAA"
+
 echo "Version: $OSTYPE"
 
 echo -e "\n>>> Terraform Info...\n"
