@@ -23,6 +23,7 @@ echo "Version: $OSTYPE"
 
 echo -e "\n>>> Terraform Info...\n"
 terraform -version
+ade operation-result --code "Verbose" --message "Getting TF Version BBBBB"
 
 echo -e "\n>>> Initializing Terraform...\n"
 terraform init -no-color
