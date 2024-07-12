@@ -23,11 +23,12 @@ echo "Version: $OSTYPE"
 
 echo -e "\n>>> Terraform Info...\n"
 terraform -version
-ade operation-result --code "Verbose" --message "Getting TF Version BBBBB"
-
+sleep 10
+ade log --content "BBBBBBBBBB"
 echo -e "\n>>> Initializing Terraform...\n"
 terraform init -no-color
-
+sleep 10
+ade log --content "CCCCCCCCC"
 echo -e "\n>>> Creating Terraform Plan...\n"
 export TF_VAR_resource_group_name=$ADE_RESOURCE_GROUP_NAME
 export TF_VAR_ade_env_name=$ADE_ENVIRONMENT_NAME
