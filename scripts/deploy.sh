@@ -40,7 +40,7 @@ export TF_VAR_ade_environment_type=$ADE_ENVIRONMENT_TYPE
 terraform plan -no-color -compact-warnings -refresh=true -lock=true -state=$EnvironmentState -out=$EnvironmentPlan -var-file="$EnvironmentVars"
 
 echo -e "\n>>> Applying Terraform Plan...\n"
-terraform apply -no-color -compact-warnings -auto-approve -lock=true -state=$EnvironmentState $EnvironmentPlan
+terraform apply -no-color -compact-warnings -auto-approve -lock=true -state=$EnvironmentState $EnvironmentPlan > $ADE_OUTPUTS
 
 # Outputs must be written to a specific file location.
 # ADE expects data types array, boolean, number, object and string.
