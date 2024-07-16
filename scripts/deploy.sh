@@ -17,18 +17,18 @@ export ARM_CLIENT_ID=$ADE_CLIENT_ID
 export ARM_TENANT_ID=$ADE_TENANT_ID
 export ARM_SUBSCRIPTION_ID=$ADE_SUBSCRIPTION_ID
 
-ade log --content "AAAAAAAAA"
+ade log --content "Log:AAAAAAAAA"
 
 echo "Version: $OSTYPE"
 
 echo -e "\n>>> Terraform Info...\n"
 terraform -version
-sleep 10
-ade log --content "BBBBBBBBBB"
+
+ade log --content "Log: BBBBBBBBBB"
 echo -e "\n>>> Initializing Terraform...\n"
 terraform init -no-color
-sleep 10
-ade log --content "CCCCCCCCC"
+
+ade log --content "Log: CCCCCCCCC"
 echo -e "\n>>> Creating Terraform Plan...\n"
 export TF_VAR_resource_group_name=$ADE_RESOURCE_GROUP_NAME
 export TF_VAR_ade_env_name=$ADE_ENVIRONMENT_NAME
